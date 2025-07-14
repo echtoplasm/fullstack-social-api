@@ -1,4 +1,4 @@
-
+/*
 create table social_posts (
   post_id serial primary key, 
   user_id int not null, 
@@ -7,7 +7,7 @@ create table social_posts (
   created_at timestamp default now() not null, 
   updated_at timestamp default now() not null
 )
-
+*/
 INSERT INTO social_posts (user_id, post_title, post_text) VALUES 
   (2, 'Machine Learning Model Help', 'Working on a neural network for image classification. Any tips on preventing overfitting?'),
   
@@ -70,42 +70,42 @@ create table social_post_category_assignments (
 
 
 INSERT INTO social_post_category_assignments (post_id, category_id) VALUES 
-  -- Assign categories to original posts first (posts 1-3)
-  (1, 1), -- iPhone jailbreak -> Technology
-  (1, 5), -- iPhone jailbreak -> Tech advice
   
-  (2, 2), -- Recursion -> Programming  
-  (2, 3), -- Recursion -> Math
+  (1, 1), 
+  (1, 5), 
   
-  (3, 1), -- W3 con -> Technology
-  (3, 2), -- W3 con -> Programming
+  (2, 2), 
+  (2, 3), 
   
-  -- New posts (assuming they start from post_id 4)
-  (4, 2), -- ML Model -> Programming
-  (4, 3), -- ML Model -> Math
-  (4, 5), -- ML Model -> Tech advice
+  (3, 1), 
+  (3, 2), 
   
-  (5, 2), -- Smart Contract -> Programming
-  (5, 4), -- Smart Contract -> Fintech
-  (5, 5), -- Smart Contract -> Tech advice
+
+  (4, 2), 
+  (4, 3), 
+  (4, 5), 
   
-  (6, 3), -- Calculus -> Math
-  (6, 5), -- Calculus -> Tech advice
+  (5, 2), 
+  (5, 4), 
+  (5, 5), 
   
-  (7, 2), -- Python Performance -> Programming
-  (7, 5), -- Python Performance -> Tech advice
+  (6, 3), 
+  (6, 5), 
   
-  (8, 1), -- React vs Vue -> Technology
-  (8, 2), -- React vs Vue -> Programming
-  (8, 5), -- React vs Vue -> Tech advice
+  (7, 2), 
+  (7, 5), 
   
-  (9, 2), -- Trading Bot -> Programming
-  (9, 3), -- Trading Bot -> Math
-  (9, 4), -- Trading Bot -> Fintech
+  (8, 1), 
+  (8, 2), 
+  (8, 5), 
   
-  (10, 1), -- Database Query -> Technology
-  (10, 2), -- Database Query -> Programming
-  (10, 5); -- Database Query -> Tech advice
+  (9, 2), 
+  (9, 3), 
+  (9, 4), 
+  
+  (10, 1), 
+  (10, 2), 
+  (10, 5); 
 
 create table education_posts(
   post_id serial primary key,
